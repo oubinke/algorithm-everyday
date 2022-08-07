@@ -1,0 +1,15 @@
+{
+  // 关闭编辑器自带的 js 检查
+  "javascript.validate.enable": false,
+  // 启用后，按 TAB 键时，将展开 Emmet 缩写
+  "emmet.triggerExpansionOnTab": true,
+  // "editor.formatOnSave": true,
+  "search.exclude": {
+    "**/node_modules": true,
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "json.schemaDownload.enable": false,
+  "files.eol": "\n"
+}

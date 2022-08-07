@@ -5,16 +5,16 @@
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function(nums, target) {
+const searchInsert = function (nums, target) {
   let left = 0;
   let right = nums.length;
   while (left < right) {
     // 直接使用left+right可能会溢出
     const mid = left + Math.floor((right - left) / 2);
     if (nums[mid] > target) {
-      right = mid
+      right = mid;
     } else if (nums[mid] < target) {
-      left = mid + 1
+      left = mid + 1;
     } else {
       return mid;
     }
@@ -26,16 +26,16 @@ var searchInsert = function(nums, target) {
   return right;
 };
 
-var searchInsert2 = function(nums, target) {
+const searchInsert2 = function (nums, target) {
   let left = 0;
   let right = nums.length - 1;
   while (left <= right) {
     // 直接使用left+right可能会溢出
     const mid = left + Math.floor((right - left) / 2);
     if (nums[mid] > target) {
-      right = mid - 1
+      right = mid - 1;
     } else if (nums[mid] < target) {
-      left = mid + 1
+      left = mid + 1;
     } else {
       return mid;
     }
@@ -47,7 +47,7 @@ var searchInsert2 = function(nums, target) {
   return right + 1;
 };
 
-var searchInsert3 = function(nums, target) {
+const searchInsert3 = function (nums, target) {
   let left = 0;
   let right = nums.length - 1;
   let res = nums.length;
@@ -55,10 +55,10 @@ var searchInsert3 = function(nums, target) {
     // 直接使用left+right可能会溢出
     const mid = left + Math.floor((right - left) / 2);
     if (nums[mid] < target) {
-      left = mid + 1
+      left = mid + 1;
     } else {
-      res = mid
-      right = mid - 1
+      res = mid;
+      right = mid - 1;
     }
   }
   return res;
